@@ -132,5 +132,24 @@ weather() {
         curl -s "wttr.in/${city}?nT"
     fi
 }
+# tmux attach session
+ta() {
+  if tmux has-session 2>/dev/null; then
+    tmux attach
+  else
+    tmux new-session
+  fi
+}
+
 export EDITOR=nvim
-export EDITOR=nvim
+
+# alias
+alias la='ls -la'
+alias ls='ls -l'
+alias grep='grep --colors=auto'
+alias vi='nvim'
+alias music='musicfox'
+alias td='tmux detach'
+alias ps='sudo pacman -S'
+alias pr='sudo pacman -R'
+alias pyy='sudo pacman -Syy'
