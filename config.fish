@@ -69,5 +69,5 @@ function gl
     git lg $argv
 end
 function gp
-    git push -u origin admin $argv
+    git push -u origin main $argv
 end
