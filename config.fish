@@ -18,6 +18,26 @@ function weather
     end
 end
 
+# nohub
+function nh
+    nohup $argv >/dev/null &
+end
+
+# cheat 用于解释命令作用
+function ch
+    curl cheat.sh/$argv[1]
+end
+
+#open amule
+function amule
+    nohup amule /dev/null 2>&1 &
+end
+
+#open cmus
+function cmusic
+    cmus $argv
+end
+
 # 建立tmux 新会话
 function ta
     if tmux has-session 2>/dev/null
@@ -60,6 +80,9 @@ end
 function pyy
     sudo pacman -Syy $argv
 end
+function pyu
+    sudo pacman -Syu $argv
+end
 
 # git alias
 function gs
@@ -71,3 +94,9 @@ end
 function gp
     git push -u origin main $argv
 end
+
+set -Ux DASHSCOPE_API_KEY sk-bdb826eaa13a4c78aab613f3785e80f6
+
+alias t task
+alias x tmux
+alias sc "nh scrcpy"
