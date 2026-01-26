@@ -12,9 +12,9 @@ set -gx EDITOR nvim
 #天气
 function weather
     if test (count  $argv) -eq 0
-        curl -s "wttr.in?nT"
+        curl -s "wttr.in?n"
     else
-        curl -s "wttr.in/$argv[1]?nT"
+        curl -s "wttr.in/$argv[1]?n"
     end
 end
 
@@ -100,3 +100,5 @@ set -Ux DASHSCOPE_API_KEY sk-bdb826eaa13a4c78aab613f3785e80f6
 alias t task
 alias x tmux
 alias sc "nh scrcpy"
+alias sticks 'nh xpad'
+alias obsidian "nh obsidian"
